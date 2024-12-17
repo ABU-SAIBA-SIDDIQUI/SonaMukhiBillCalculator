@@ -35,10 +35,16 @@ document.getElementById('calculateBtn').addEventListener('click', () => {
     const pdf = new jsPDF();
   
     const content = document.getElementById('result').innerText;
-  
-    pdf.text("Sona Mukhi Bill Calculator", 10, 10);
-    pdf.text(content, 10, 20);
-  
+    pdf.setFillColor(115, 9, 83);
+    pdf.rect(0, 0, 210, 297, "F");
+    pdf.setTextColor(255, 255, 255);
+   
+    pdf.text(content, 70, 50);
+    
+    pdf.setFontSize(25);
+    pdf.text("Sona Mukhi Bill Calculator", 60, 30);
+    pdf.text("HR ENTERPRISIES", 70, 20);
+
     pdf.save('Sona_Mukhi_Bill.pdf');
   });
   
