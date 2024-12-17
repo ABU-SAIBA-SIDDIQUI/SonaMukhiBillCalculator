@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sona Mukhi Bill Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sona Mukhi Bill Calculator</h1>
+    <form id="billForm">
+      <label for="initialWeight">Initial Weight (kg):</label>
+      <input type="number" id="initialWeight" required>
+
+      <label for="deductionPercentage">Deduction Percentage (%):</label>
+      <input type="number" id="deductionPercentage" value="10" required>
+
+      <label for="subtractedWeight">Subtracted Weight (kg):</label>
+      <input type="number" id="subtractedWeight" required>
+
+      <label for="ratePerKg">Rate per kg (Rs):</label>
+      <input type="number" id="ratePerKg" required>
+
+      <label for="cdPercentage">CD Percentage (%):</label>
+      <input type="number" id="cdPercentage" required>
+
+      <button type="button" id="calculateBtn">Calculate</button>
+    </form>
+    <div id="output">
+      <h3>Final Output:</h3>
+      <div id="result"></div>
+      <button id="downloadPdf" style="display:none;">Download PDF</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
